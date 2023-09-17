@@ -1,0 +1,52 @@
+<?php
+header('Content-Type: application/json');
+
+// Simulated database
+$tasks = [
+    ['id' => 1, 'task' => 'Buy groceries'],
+    ['id' => 2, 'task' => 'Clean the house'],
+    ['id' => 3, 'task' => 'Finish project']
+];
+
+// Handle HTTP methods
+$method = $_SERVER['REQUEST_METHOD'];
+
+switch ($method) {
+    case 'GET':
+        echo json_encode($tasks);
+        break;
+
+    case 'POST':
+        $data = json_decode(file_get_contents('php://input'), true);
+        $newTask = ['id' => count($tasks) + 1, 'task' => $data['task']];
+        $tasks[] = $newTask;
+        echo json_encode($newTask);
+        break;
+
+    case 'PUT':
+        $data = json_decode(file_get_contents('php://input'), true);
+        foreach ($tasks as &$task) {
+            if ($task['id'] == $data['id']) {
+                $task['task'] = $data['task'];
+                echo json_encode($task);
+                break;
+            }
+        }
+        break;
+
+    case 'DELETE':
+        $data = json_decode(file_get_contents('php://input'), true);
+        foreach ($tasks as $index => $task) {
+            if ($task['id'] == $data['id']) {
+                array_splice($tasks, $index, 1);
+                echo json_encode(['message' => 'Task deleted']);
+                break;
+            }
+        }
+        break;
+
+    default:
+        echo json_encode(['message' => 'Method not supported']);
+        break;
+}
+?>

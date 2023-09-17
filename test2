@@ -1,0 +1,27 @@
+<?php
+// Simulated database of users
+$users = [
+    'john' => 'password123',
+    'jane' => 'securepass',
+    'admin' => 'admin'
+];
+
+// Function to authenticate a user
+function authenticate($username, $password, $users) {
+    if (isset($users[$username]) && $users[$username] === $password) {
+        return true;
+    }
+    return false;
+}
+
+// Simulated form input
+$inputUsername = 'john';
+$inputPassword = 'password123';
+
+// Authenticate the user
+if (authenticate($inputUsername, $inputPassword, $users)) {
+    echo "Authentication successful. Welcome, $inputUsername!";
+} else {
+    echo "Authentication failed. Invalid username or password.";
+}
+?>

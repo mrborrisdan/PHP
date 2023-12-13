@@ -87,12 +87,6 @@ switch ($method) {
 ?>**/
 
 
-
-
-/** comment **/
-
-/** comment **/
-
 /**
  case 'DELETE':
         $data = json_decode(file_get_contents('php://input'), true);

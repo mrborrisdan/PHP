@@ -255,3 +255,10 @@ $inputUsername = 'john';
 $inputPassword = 'password123';
 /*********************************/
 
+/**********************/
+
+// Simulated form input
+$inputUsername = 'john';
+$inputPassword = 'password123';
+/*********************************/
+

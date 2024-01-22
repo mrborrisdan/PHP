@@ -15,8 +15,6 @@ function authenticate($username, $password, $users) {
 }
 
 
-
-
 /** next **/
 // Simulated form input
 $inputUsername = 'john';

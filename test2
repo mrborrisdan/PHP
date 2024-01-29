@@ -44,6 +44,7 @@ function authenticate($username, $password, $users) {
     return false;
 }
 
+
 // Simulated form input
 $inputUsername = 'john';
 $inputPassword = 'password123';
@@ -248,13 +249,5 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
 ?>
 
 /**********************/
-
-// Simulated form input
-$inputUsername = 'john';
-$inputPassword = 'password123';
-/*********************************/
-
-/**********************/
-
 
 /**************/

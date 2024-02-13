@@ -257,3 +257,17 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
 
 /**********************/
 /**************/
+
+/**********************/
+/**************/
+
+// Authenticate the user
+if (authenticate($inputUsername, $inputPassword, $users)) {
+    echo "Authentication successful. Welcome, $inputUsername!";
+} else {
+    echo "Authentication failed. Invalid username or password.";
+}
+?>
+
+/**********************/
+/**************/

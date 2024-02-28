@@ -317,3 +317,13 @@ TODO
                 break;
             }
         }
+
+ case 'DELETE2':
+        $data = json_decode(file_get_contents('php://input'), true);
+        foreach ($tasks as $index => $task) {
+            if ($task['id'] == $data['id']) {
+                array_splice($tasks, $index, 1);
+                echo json_encode(['message' => 'Task deleted']);
+                break;
+            }
+        }

@@ -264,6 +264,8 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
     echo "Authentication failed. Invalid username or password.";
 }
 ?>
+
+
 /**************/
 /*******************************/
 

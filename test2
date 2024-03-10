@@ -147,7 +147,6 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
     echo "Authentication failed. Invalid username or password.";
 }
 ?>
-
 // Simulated form input
 $inputUsername = 'john';
 $inputPassword = 'password123';

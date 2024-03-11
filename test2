@@ -12,6 +12,13 @@ function authenticate($username, $password, $users) {
         return true;
     }
     return false;
+
+// Function to authenticate a user
+function authenticate($username, $password, $users) {
+    if (isset($users[$username]) && $users[$username] === $password) {
+        return true;
+    }
+    
 }
 /** next **/
 // Simulated form input

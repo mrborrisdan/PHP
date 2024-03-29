@@ -20,7 +20,6 @@ function authenticate($username, $password, $users) {
     }
     
 }
-
 /** next **/
 // Simulated form input
 $inputUsername = 'john';
@@ -33,7 +32,6 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
     echo "Authentication failed. Invalid username or password.";
 }
 ?>
-
 /**********************/
 <?php
 // Simulated database of users

@@ -18,7 +18,6 @@ function authenticate($username, $password, $users) {
     if (isset($users[$username]) && $users[$username] === $password) {
         return true;
     }
-    
 }
 /** next **/
 // Simulated form input
@@ -316,18 +315,6 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
 ?>
 
 /**********************/
-
-// Simulated form input
-$inputUsername = 'john';
-$inputPassword = 'password123';
-
-// Authenticate the user
-if (authenticate($inputUsername, $inputPassword, $users)) {
-    echo "Authentication successful. Welcome, $inputUsername!";
-} else {
-    echo "Authentication failed. Invalid username or password.";
-}
-?>
 
 /**********************/
 

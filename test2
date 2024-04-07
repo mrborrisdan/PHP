@@ -39,7 +39,7 @@ $users = [
     'jane' => 'securepass',
     'admin' => 'admin'
 ];
-
+/***************************************************************************/
 // Function to authenticate a user
 function authenticate($username, $password, $users) {
     if (isset($users[$username]) && $users[$username] === $password) {

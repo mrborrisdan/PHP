@@ -18,6 +18,9 @@ function authenticate($username, $password, $users) {
     if (isset($users[$username]) && $users[$username] === $password) {
         return true;
     }
+
+
+/**************/
 }
 /** next **/
 // Simulated form input

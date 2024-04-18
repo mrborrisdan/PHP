@@ -364,10 +364,6 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
 $inputUsername = 'john';
 $inputPassword = 'password123';
 
-// Simulated form input
-$inputUsername = 'john';
-$inputPassword = 'password123';
-
 // Authenticate the user
 if (authenticate($inputUsername, $inputPassword, $users)) {
     echo "Authentication successful. Welcome, $inputUsername!";

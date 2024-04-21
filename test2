@@ -345,6 +345,8 @@ if (authenticate($inputUsername, $inputPassword, $users)) {
 }
 ?>
 
+/*************************************************************************/
+
 /**********************/
 
 // Simulated form input
